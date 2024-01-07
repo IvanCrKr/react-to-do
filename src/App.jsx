@@ -1,8 +1,15 @@
-import './App.css';
+import './App.scss';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Notes from './pages/Notes';
 
-function App() {
+const App = () => {
   return (
-    <h1> Hello world </h1>
+    <>
+      <Header></Header>
+      <Notes></Notes>
+      <Footer></Footer>
+    </>
   );
 }
 
