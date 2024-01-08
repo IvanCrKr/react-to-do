@@ -1,4 +1,5 @@
 import React from 'react';
+import './_Notes.style.scss';
 
 const Notes = () => {
     return (

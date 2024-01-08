@@ -2,8 +2,12 @@ import './_Footer.style.scss';
 
 const Footer = () => {
     return (
-        <h1>Bye</h1>
-    )
+        <footer className="text-center footer fixed-bottom">
+            <div className="text-center p-2">
+                CrunchyKernel
+            </div>
+        </footer>
+    );
 };
 
 export default Footer;
