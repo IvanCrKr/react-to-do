@@ -14,8 +14,22 @@ export const useNotes = (initialState) => {
     const [notes, setNotes] = useState(savedNotes);
     localStorage.setItem('saved_notes', JSON.stringify(notes))
 
+    const handleToggleNote = (noteId) => {
+        setNotes(currentNotes => currentNotes.map(note => {
+            if (note.id === noteId) {
+                const changedNote = {
+                    ...note,
+                    done: !note.done
+                };
+                return changedNote;
+            }
+            return note;
+        }));
+        localStorage.setItem('saved_notes', JSON.stringify(notes));
+    };
     
     return {
-        notes: notes
+        notes,
+        handleToggleNote
     };
 };
